@@ -18,9 +18,7 @@ export class LoginPage {
   constructor(private navCtrl: NavController, private navParams: NavParams) {
   }
 
-  navigateToPage(pageName: string) {
-    pageName === 'TabsPage' ? this.navCtrl.setRoot(pageName) : this.navCtrl.push(pageName);
-  }
+ 
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
