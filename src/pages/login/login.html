@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>LoginPage</ion-title>
+    <ion-title>Login</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -17,6 +17,6 @@
 
   <img src="assets/imgs/MyLogo.png" alt="logo" class="logo">
  
-  <app-login-form> </app-login-form>
+  <app-login-form (loginStatus)="login($event)"></app-login-form>
 
 </ion-content>
