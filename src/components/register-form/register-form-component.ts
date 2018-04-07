@@ -30,6 +30,7 @@ export class RegisterFormComponent {
   }
   
   async register() {
+    
     try {
       const result = await 
         this.afAuth.createUserWithEmailAndPassword(this.account)
