@@ -17,6 +17,9 @@ export class AuthServiceProvider {
     
   }
 
+  getAuthenticatedUser() {
+     return this.auth.authState;
+  }
 
   async createUserWithEmailAndPassword(account: Account) {
     try {
