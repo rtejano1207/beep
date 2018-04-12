@@ -10,6 +10,7 @@ import { FIREBASE_CONFIG } from './app.firebase.config'
 import { AuthServiceProvider } from '../providers/auth/auth.service';
 import { DataServiceProvider } from '../providers/data/data.service';
 import { MyApp } from './app.component';
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { MyApp } from './app.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp( FIREBASE_CONFIG ),
     AngularFireAuthModule,
