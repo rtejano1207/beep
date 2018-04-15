@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Profile } from '../../models/profile/profile.interface';
 
 /**
- * Generated class for the EditProfilePage page.
+ * Generated class for the MessagePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,23 +11,23 @@ import { Profile } from '../../models/profile/profile.interface';
 
 @IonicPage()
 @Component({
-  selector: 'page-edit-profile',
-  templateUrl: 'edit-profile.html',
+  selector: 'page-message',
+  templateUrl: 'message.html',
 })
-export class EditProfilePage {
-  
-  profile = {} as Profile;
+export class MessagePage {
+
+  selectedProfile: Profile;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.profile = this.navParams.get('existingProfile');
   }
 
-  saveProfileResult(event: Boolean) {
-    event ? this.navCtrl.setRoot('TabsPage') : console.log("Not Authenticated or saved.");
+  ionViewWillLoad() {
+    this.selectedProfile = this.navParams.get('profile');
+    
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad EditProfilePage');
+    console.log('ionViewDidLoad MessagePage');
   }
 
 }

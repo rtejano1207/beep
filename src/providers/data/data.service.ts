@@ -27,7 +27,11 @@ export class DataServiceProvider {
     //   }
     // })\
     
-    const query = this.database.list('/profiles', ref => ref.orderByChild('firstName').equalTo(firstName));
+    //const query = this.database.list('/profiles', ref => ref.orderByChild('firstName').equalTo(firstName));
+    
+    /* search a sub-tring  */
+    const query = this.database.list('/profiles', ref => ref.orderByChild('firstName').startAt(firstName).endAt(firstName+"\uf8ff"));
+    
     return query.valueChanges();
   }
 
